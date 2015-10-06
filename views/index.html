@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<ol>
+	<li>Hotels: <select id = "hotels"> 
+		{% for hotel in hotels%}
+			<option>{{hotel.name}}</option>
+		{% endfor %}
+	</select></li>			
+	<li>Restaurants: <select id = "restaurants"> 
+		{% for restaurant in restaurants%}
+			<option>{{restaurant.name}}</option>
+		{% endfor %}
+	</select></li>			
+	<li>Activities: <select id = "activities"> 
+		{% for activity in activities%}
+			<option>{{activity.name}}</option>
+		{% endfor %}
+	</select></li>
+</ol>
+
+{% endblock %}
