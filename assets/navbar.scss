@@ -5,13 +5,19 @@
 .navbar-fixed-top {
 	width: 265px;
 	border-bottom-right-radius: $border-rad;
-	border-right: 3px solid black;
-	border-bottom: 3px solid black;
+	border-right: 3px solid red;
+	border-bottom: 3px solid red;
 }
 
 .navbar {
+	img {
+		height: 25px;
+		width: 25px;
+		color: white;
+	}
 	background-color: $bckground-col;
-	z-index: 100;
+	z-index: 9999999999;
+
 	li {
 		display: inline-block;
 	}

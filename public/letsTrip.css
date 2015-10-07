@@ -4,13 +4,17 @@
 .navbar-fixed-top {
   width: 265px;
   border-bottom-right-radius: 10px;
-  border-right: 3px solid black;
-  border-bottom: 3px solid black; }
+  border-right: 3px solid red;
+  border-bottom: 3px solid red; }
 
 .navbar {
   background-color: #000060;
-  z-index: 100;
+  z-index: 9999999999;
   position: fixed; }
+  .navbar img {
+    height: 25px;
+    width: 25px;
+    color: white; }
   .navbar li {
     display: inline-block; }
   .navbar .tooltip-social, .navbar .drag-me .tooltip-social-left, .drag-me .navbar .tooltip-social-left {
@@ -44,13 +48,13 @@ ol {
   float: left; }
 
 .drag-me {
-  z-index: 9999999999;
+  z-index: 999999999;
   float: left;
-  position: relative;
+  position: absolute;
   display: inline;
   background-color: #000060;
   border-radius: 10px;
-  border: 3px solid black;
+  border: 3px solid red;
   height: 100%;
   width: 100%; }
   .drag-me p {
@@ -76,15 +80,18 @@ ol {
     padding: 0 5px 0 0; }
 
 .selects {
-  top: 65px;
-  left: 20px; }
+  top: 70px;
+  left: 20px;
+  min-height: 120px;
+  min-width: 420px; }
 
 .day-info {
   color: white;
   top: 65px;
   left: 250px;
-  height: 310px;
-  width: 250px; }
+  width: 250px;
+  min-height: 310px;
+  min-width: 250px; }
   .day-info .days {
     width: 100%; }
     .day-info .days li {

@@ -35,13 +35,13 @@ ol {
 }
 
 .drag-me {
-	z-index: 9999999999;
+	z-index: 999999999;
 	float: left;
-	position: relative;
+	position: absolute;
 	display: inline;
 	background-color: $bckground-col;
 	border-radius: $border-rad;
-	border: 3px solid black;
+	border: 3px solid red;
 
 	p {
 		color: $txt-col;
@@ -77,18 +77,19 @@ ol {
 }
 
 .selects {
-	top: 65px;
+	top: 70px;
 	left: 20px;
-	// height: 120px;
-	// width: 420px;
+	min-height: 120px;
+	min-width: 420px;
 }
 
 .day-info {
 	color: $subtxt-col;
 	top: 65px;
 	left: 250px;
-	height: 310px;
 	width: 250px;
+	min-height: 310px;
+	min-width: 250px;
 	.days {
 		width: 100%;
 		li {
