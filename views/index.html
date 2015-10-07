@@ -2,22 +2,66 @@
 
 {% block body %}
 
-<ol>
-	<li>Hotels: <select id = "hotels"> 
-		{% for hotel in hotels%}
-			<option>{{hotel.name}}</option>
-		{% endfor %}
-	</select></li>			
-	<li>Restaurants: <select id = "restaurants"> 
-		{% for restaurant in restaurants%}
-			<option>{{restaurant.name}}</option>
-		{% endfor %}
-	</select></li>			
-	<li>Activities: <select id = "activities"> 
-		{% for activity in activities%}
-			<option>{{activity.name}}</option>
-		{% endfor %}
-	</select></li>
-</ol>
+	<div id = "resize-me" class = "drag-me selects">
+<!-- 		<div id = "resize-me">
+ -->			<ol>
+				<li><i class="fa fa-bed tooltip-social-left"></i><select id = "hotels"> 
+					{% for hotel in hotels%}
+						<option>{{hotel.name}}</option>
+					{% endfor %}
+				</select> <i class="fa fa-plus-circle tooltip-social"></i> </li>			
+				<li><i class="fa fa-cutlery tooltip-social-left"></i><select id = "restaurants"> 
+					{% for restaurant in restaurants%}
+						<option>{{restaurant.name}}</option>
+					{% endfor %}
+				</select> <i class="fa fa-plus-circle tooltip-social"></i> </li>			
+				<li><i class="fa fa-beer tooltip-social-left"></i><select id = "activities"> 
+					{% for activity in activities%}
+						<option>{{activity.name}}</option>
+					{% endfor %}
+				</select> <i class="fa fa-plus-circle tooltip-social"></i> </li>
+			</ol>
+<!-- 		</div>
+ -->	</div>
+
+<div class = "drag-me day-info">
+<!-- 	<p> Day: </p>
+ --><ol class = "days">
+		<li> <div class = "circle">1</div> </li>
+		<li> <div class = "circle active">2</div> </li>
+		<li> <div class = "circle">+</div> </li>
+	</ol>
+
+    <div class="container">
+    	<div class = "row">
+			<div class = "col-md-12">
+			    <ol class = "notdays hotel ">
+					<p> Hotel </p>
+					<li> Hotel 91 <i class="fa fa-times-circle tooltip-social"></i> </li>
+				</ol>	
+			</div>
+			<div class = "col-md-12">			
+				<ol class = "notdays restaurants">
+					<p> Restaurants </p>
+					<li> Joe's Shanghai <i class="fa fa-times-circle tooltip-social"></i></li>
+					<li> Mas Farmhouse  <i class="fa fa-times-circle tooltip-social"></i></li>
+				</ol >	
+			</div>
+			<div class = "col-md-12">
+				<ol class = "notdays activities">
+					<p> Activities </p>
+					<li> Washington Square Park <i class="fa fa-times-circle tooltip-social"></i></li>
+					<li> South Street Seaport <i class="fa fa-times-circle tooltip-social"></i></li>
+					<li> Blue Man Group <i class="fa fa-times-circle tooltip-social"></i></li>
+				</ol>	
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id = "map-canvas">
+
+</div>
 
 {% endblock %}

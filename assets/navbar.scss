@@ -1,0 +1,35 @@
+.nav-container {
+	float: left;
+}
+
+.navbar-fixed-top {
+	width: 265px;
+	border-bottom-right-radius: $border-rad;
+	border-right: 3px solid black;
+	border-bottom: 3px solid black;
+}
+
+.navbar {
+	background-color: $bckground-col;
+	z-index: 100;
+	li {
+		display: inline-block;
+	}
+	position: fixed;
+	.tooltip-social {
+		font-size: 25px;
+		padding: 15px;
+		color: $txt-col;
+	}
+}
+
+.navbar-brand {
+	margin-top: 7px;
+	color: $subtxt-col;
+	&:visited {
+		color: $subtxt-col;
+	}
+	&:hover {
+		color: red;
+	}
+}

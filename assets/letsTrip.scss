@@ -1,10 +1,147 @@
+$bckground-col: #000060;
+$border-rad: 10px;
+$txt-col: #337ab7;//#2be1c1;
+$hover: yellow;
+$subtxt-col: white;
+// fullstack
+// #aa0036
+//#333 
+// original
+// #337ab7;
+// #8B008B;
+
+@import "navbar";
+
 li {
 	list-style: none;
 	padding-left: 0;
-	display: inline-block;
 }
 
 ol {
 	padding-left: 0;
+}
 
+#map-canvas {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;	
+
+}
+
+#resize-me{
+	height: 130px;
+	width: 450px;
+	float: left;
+}
+
+.drag-me {
+	z-index: 9999999999;
+	float: left;
+	position: relative;
+	display: inline;
+	background-color: $bckground-col;
+	border-radius: $border-rad;
+	border: 3px solid black;
+
+	p {
+		color: $txt-col;
+		font-weight: bold;
+		padding-right: 1vw;
+		display: inline;
+	}
+	li {
+		margin-left: 2.5%;
+		margin-top: 2.5%;
+		display: block;
+	}
+	select {
+		border-radius: $border-rad;
+	}
+	height: 100%;
+	width: 100%;
+	button {
+		border-radius: 100%;
+	}
+	.tooltip-social {
+		font-size: 20px;
+		padding-left: 5px;
+		color: $txt-col;
+		&:hover {
+			color: yellow;
+		}
+	}
+	.tooltip-social-left {
+		@extend .tooltip-social;
+		padding: 0 5px 0 0;
+	}
+}
+
+.selects {
+	top: 65px;
+	left: 20px;
+	// height: 120px;
+	// width: 420px;
+}
+
+.day-info {
+	color: $subtxt-col;
+	top: 65px;
+	left: 250px;
+	height: 310px;
+	width: 250px;
+	.days {
+		width: 100%;
+		li {
+			display: inline-block;
+		}
+	}
+	.circle {
+		height: 25px;
+		width: 25px;
+		border: 2px solid black;
+		border-radius: 100%;
+		text-align: center;
+		margin: 0 5px; 
+		&:hover {
+			@extend .hover;
+		}
+
+	}
+	.notdays {
+		display: inline-block;
+		li {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+	.delete {
+		@extend .circle;
+		display: inline-block;
+	}
+
+	p {
+		color: $txt-col;
+		font-weight: bold;
+		padding-right: 1vw;
+	}
+}
+
+.hover {
+	background-color: $hover;
+	color: black;	
+}
+
+.active {
+	background-color: $txt-col;
+	color: black;
+
+}
+
+.container {
+	width: 100%;
+}
+
+
+#btn-container {
+	display: inline-block
 }
